@@ -20,10 +20,14 @@ public class Conditions {
 	        	txtbox_firstname.sendKeys("Roxy");
 	        }
 	        
-	        do{
-	        	txtbox_firstname.sendKeys("Foxy");
-	        }while (driver.findElement(By.name("lastname")).isDisplayed()); //∞
+	        //do{
+	        //	txtbox_firstname.sendKeys("Foxy");
+	        //}while (driver.findElement(By.name("lastname")).isDisplayed()); //∞
 	        
-	        driver.close();
+	        if (driver.findElement(By.id("u_0_i")).isSelected() == false){
+	        	driver.findElement(By.id("u_0_j")).click();
+	        }
+	        
+	        //driver.close();
 	    }
 	}
